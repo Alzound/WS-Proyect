@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
 
     [Header("Character options")]
-    public float gravity = 20.0f; 
+    public float gravity = 20.0f;
     public float movementSpeed = 80;
     public float jumpSpeed = 8.0f;
 
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 
         Movement();
-   
+
     }
 
     void Movement()
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             move = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-            move = transform.TransformDirection(move) * movementSpeed; 
+            move = transform.TransformDirection(move) * movementSpeed;
 
             if (Input.GetKey(KeyCode.Space))
             {
