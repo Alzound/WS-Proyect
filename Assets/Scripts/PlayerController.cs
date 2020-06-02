@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Character options")]
     public float gravity = 20.0f;
-    public float movementSpeed = 80;
+    public float movementSpeed = 40;
     public float jumpSpeed = 8.0f;
 
     [Header("Camera options")]
@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 move.y = jumpSpeed;
+            }
+            else if(Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit(); 
             }
         }
         move.y -= gravity * Time.deltaTime;
